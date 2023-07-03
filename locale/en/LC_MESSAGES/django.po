@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-24 14:18+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\news_project\settings.py:111
+msgid "Uzbek"
+msgstr ""
+
+#: .\news_project\settings.py:112
+msgid "Russian"
+msgstr ""
+
+#: .\news_project\settings.py:113
+msgid "English"
+msgstr ""
+
+#: .\templates\news\base.html:37
+msgid "Bosh Sahifa"
+msgstr "Home Page"
+
+#: .\templates\news\base.html:38
+msgid "Aloqa"
+msgstr "Contact"
+
+#: .\templates\news\base.html:60
+msgid " Mening profilim"
+msgstr "My profile"
+
+#: .\templates\news\base.html:61
+#, fuzzy
+#| msgid "Saytga kirish"
+msgid "Saytdan chiqish"
+msgstr "Login to the site"
+
+#: .\templates\news\base.html:63
+msgid "Saytga kirish"
+msgstr "Login to the site"
+
+#: .\templates\news\base.html:64
+msgid "Saytdan ro'yhatdan o'tish"
+msgstr "Register from the site"
+
+#: .\templates\news\base.html:106
+msgid "SO'NGI YANGILIKLAR "
+msgstr "LATEST NEWS"
+
+#: .\templates\news\index.html:24
+msgid "ENG SO'NGI YANGILIKLAR"
+msgstr "LATEST NEWS"
+
+#: .\templates\news\index.html:47
+msgid "MAHALIY YANGILIKLAR"
+msgstr "LOCAL NEWS"
+
+#: .\templates\news\index.html:71
+msgid "Xorij"
+msgstr "Foreign"
+
+#: .\templates\news\index.html:91
+msgid "Texnologiya"
+msgstr "Technology"
+
+#: .\templates\news\index.html:146
+msgid "Sport"
+msgstr "Sport"
+
+#: .\templates\news\index.html:170
+msgid "Eng qiziq yangiliklar"
+msgstr "Popular News"
+
+#: .\templates\news\index.html:180
+msgid "Eng qiziq yangiliklar topilmadi."
+msgstr "No popular news"

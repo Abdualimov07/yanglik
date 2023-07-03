@@ -1,0 +1,20 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Texnologiya Yangiliklar {% endblock title %}
+
+
+{% block content %}
+    {% for texnologiya in texnologiya_yangiliklar %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="{{ texnologiya.image.url }}" alt="" style="max-width: 200px; max-height: 200px; float: left; margin-right: 10px;">
+                    <a href="{% url 'news_detail_page' texnologiya.pk %}" style="text-align: center; margin-top: 0;">{{ texnologiya.title }}</a>
+                </div>
+            </div>      
+        </div><br><br>
+
+    {% endfor %}
+
+{% endblock content %}

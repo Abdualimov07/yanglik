@@ -1,0 +1,27 @@
+{% extends 'news/base.html' %}
+
+{% block title %}Kirish sahifasi{% endblock title %}
+
+
+{% block content %}
+
+    <h2>Veb-saytga kirish</h2><br>
+    <p>Iltimos, saytga kirish uchun quyidagi formani to'ldiring</p><br><br>
+    {% comment %} {% load socialaccount %}
+    <a href="{% provider_login_url 'google' %}">Google orqali kirish</a>
+    <br><br> {% endcomment %}
+    <form method="post" >{% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field.errors }}
+                <input type="{{ field.field.widget.input_type }}" class="form-control" style="width:400px;" name="{{ field.html_name }}" id="{{ field.id_for_label }}" value="{{ field.value|default_if_none:'' }}">
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-danger" style="border-radius:4px; background-color: #EF5AF1; text-decoration: none;">Kirish</button><br><br>
+        <p style="color:black">Akkauntingiz yoqmi unda <a href="{% url 'register' %}" style="color:red">ro'yhatdan o'tishingiz </a>mumkin</p>
+        <h4><a href="{% url 'password-change'  %}" style="color:red">Parolni o'zgartirish</a></h4><br>
+        <h4><a href="{% url 'password-reset' %}" style="color:red">Parolni qayta tiklash</a></h4>
+    </form><br><br>
+
+{% endblock content %}

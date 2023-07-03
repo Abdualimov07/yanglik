@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-24 14:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\news_project\settings.py:111
+msgid "Uzbek"
+msgstr ""
+
+#: .\news_project\settings.py:112
+msgid "Russian"
+msgstr ""
+
+#: .\news_project\settings.py:113
+msgid "English"
+msgstr ""
+
+#: .\templates\news\base.html:37
+msgid "Bosh Sahifa"
+msgstr "Главная страница"
+
+#: .\templates\news\base.html:38
+msgid "Aloqa"
+msgstr "Коммуникация"
+
+#: .\templates\news\base.html:60
+msgid " Mening profilim"
+msgstr "Мой профайл"
+
+#: .\templates\news\base.html:61
+#, fuzzy
+#| msgid "Saytga kirish"
+msgid "Saytdan chiqish"
+msgstr "Войти на сайт"
+
+#: .\templates\news\base.html:63
+msgid "Saytga kirish"
+msgstr "Войти на сайт"
+
+#: .\templates\news\base.html:64
+msgid "Saytdan ro'yhatdan o'tish"
+msgstr "Зарегистрироваться с сайта"
+
+#: .\templates\news\base.html:106
+msgid "SO'NGI YANGILIKLAR "
+msgstr "ПОСЛЕДНИЕ НОВОСТИ"
+
+#: .\templates\news\index.html:24
+msgid "ENG SO'NGI YANGILIKLAR"
+msgstr "ПОСЛЕДНИЕ НОВОСТИ"
+
+#: .\templates\news\index.html:47
+msgid "MAHALIY YANGILIKLAR"
+msgstr "МЕСТНЫЕ НОВОСТИ"
+
+#: .\templates\news\index.html:71
+msgid "Xorij"
+msgstr "За границей"
+
+#: .\templates\news\index.html:91
+msgid "Texnologiya"
+msgstr "Технологии"
+
+#: .\templates\news\index.html:146
+msgid "Sport"
+msgstr "Cпорта"
+
+#: .\templates\news\index.html:170
+msgid "Eng qiziq yangiliklar"
+msgstr "Самые интересные новости"
+
+#: .\templates\news\index.html:180
+msgid "Eng qiziq yangiliklar topilmadi."
+msgstr "Самой интересной новости найти не удалось."

@@ -1,0 +1,21 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}Foydalanuvchilarni ro'yhatdan o'tkazish{% endblock title %}
+
+{% block content %}
+  <h2>Yangi foydalanuvchilarni ro'yhatdan o'tkazish</h2><br><br>
+  <p>Ro'yhatdan o'tish uchun quyidagi formani to'ldiring: </p><br><br>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="form-group">
+          {{ field.label_tag }}
+          {{ field.errors }}
+          <input type="{{ field.field.widget.input_type }}" class="form-control" style="width:400px;" name="{{ field.html_name }}" id="{{ field.id_for_label }}" value="{{ field.value|default_if_none:'' }}">
+      </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-danger" style="border-radius:4px; background-color: #EF5AF1; text-decoration: none;">Ro'yhatdan o'tish</button><br><br>
+
+  </form>
+{% endblock %}

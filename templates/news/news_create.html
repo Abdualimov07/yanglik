@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Yangiliklarni yaratish {% endblock title %}
+
+{% block content %}
+    <h2 class="text-center"></h2>
+    <form action="#" method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-info ml-2">Yangilik qo'shish</button>
+
+    </form>    
+
+{% endblock content %}
+
+
+

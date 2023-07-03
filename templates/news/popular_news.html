@@ -1,0 +1,20 @@
+{% extends 'news/base.html' %}
+<h2>POPULAR POST</h2>
+
+{% block content %}
+{% if popular_news %}
+  
+    {% for news in popular_news %}
+        <li>        
+            <figure class="bsbig_fig"> <a href="{% url 'news_detail_page' news.pk %}" class="featured_img"> <img alt="" src="{{ news.image.url }}"> <span class="overlay"></span></a>
+                <figcaption> <a href="{% url 'news_detail_page' news.pk %}">{{ news.title }}</a> </figcaption>
+                <p>{{ news.body | truncatewords:10 }}</p>
+            </figure>
+        </li>
+                   
+    {% endfor %}
+
+{% else %}
+    <p>Популярные новости отсутствуют.</p>
+{% endif %}
+{% endblock content %}

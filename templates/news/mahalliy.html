@@ -1,0 +1,21 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Mahalliy Yangiliklar {% endblock title %}
+
+
+{% block content %}
+    {% for mahalliy in mahalliy_yangiliklar %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="{{ mahalliy.image.url }}" alt="Photo" style="max-width: 200px; max-height: 200px; float: left; margin-right: 10px;">
+                    <a href="{% url 'news_detail_page' mahalliy.pk %}" style="text-align: center; margin-top: 0;">{{ mahalliy.title }}</a>
+                </div>
+            </div>       
+        </div><br><br>
+        
+
+    {% endfor %}
+
+{% endblock content %}

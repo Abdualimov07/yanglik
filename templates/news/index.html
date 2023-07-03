@@ -1,0 +1,217 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title  %} Home Page {% endblock title %}
+{% block content %}
+  <section id="sliderSection">
+    <div class="row">
+     
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="slick_slider">
+          {% for news in news_list %} 
+          <div class="single_iteam"> <a href="{% url 'news_detail_page' news.pk %}"> <img src="{{ news.image.url }}" alt=""></a>
+            <div class="slider_article"> 
+              <h2><a class="slider_tittle" href="{% url 'news_detail_page' news.pk %}">{{ news.title | truncatewords:5 }}</a></h2> 
+              <p>{{ news.body | truncatewords:10 }}</p> 
+            </div> 
+          </div> 
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="latest_post">
+          <h2><span>{% blocktrans %}ENG SO'NGI YANGILIKLAR{% endblocktrans %}</span></h2>
+          <div class="latest_post_container">
+            <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+            <ul class="latest_postnav">
+              {% for news in news_list %}
+              <li>
+                <div class="media"> <a href="{% url 'news_detail_page'  news.pk %}" class="media-left"> <img alt="" src="{{ news.image.url }}"> </a>
+                  <div class="media-body"> <a href="{% url 'news_detail_page' news.pk %}" class="catg_title"> {{ news.title }}</a> </div>
+                </div>
+              </li>        
+              {% endfor %}
+            </ul>
+            <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_post_content">
+            <h2><span>{% blocktrans %}MAHALIY YANGILIKLAR{% endblocktrans %}</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav  wow fadeInDown">
+                <li>
+                  {% for last_local_news in last_local_news %}
+                  <li>
+                    
+                    <figure class="bsbig_fig"> <a href="{% url 'news_detail_page' last_local_news.pk %}" class="featured_img"> <img alt="" src="{{ last_local_news.image.url }}"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="{% url 'news_detail_page' last_local_news.pk %}">{{ last_local_news.title }}</a> </figcaption>
+                      <p>{{ last_local_news.body | truncatewords:10 }}</p>
+                    </figure>
+                  </li>
+                  {% endfor %}
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content_right">
+              <ul class="spost_nav">
+              </ul> 
+            </div>
+          </div>
+          <div class="fashion_technology_area">
+            <div class="fashion">
+              <div class="single_post_content">
+                <h2><span>{% blocktrans %}Xorij{% endblocktrans %}</span></h2>
+                <ul class="business_catgnav  wow fadeInDown">
+                  <li>
+                    {% for last_foreign_news in last_foreign_news %}
+                    <li>
+                      
+                      <figure class="bsbig_fig"> <a href="{% url 'news_detail_page' last_foreign_news.pk %}" class="featured_img"> <img alt="" src="{{ last_foreign_news.image.url }}"> <span class="overlay"></span> </a>
+                        <figcaption> <a href="{% url 'news_detail_page' last_foreign_news.pk %}">{{ last_foreign_news.title }}</a> </figcaption>
+                        <p>{{ last_foreign_news.body | truncatewords:10 }}</p>
+                      </figure>
+                    </li>
+                    {% endfor %}
+                  </li>
+                </ul>
+                
+                </ul>
+              </div>
+            </div> 
+            <div class="technology">
+              <div class="single_post_content">
+                <h2><span>{% blocktrans %}Texnologiya{% endblocktrans %}</span></h2>
+                <ul class="business_catgnav  wow fadeInDown">
+                  <li>
+                    {% for last_technology_news in last_technology_news %}
+                    <li>
+                      
+                      <figure class="bsbig_fig"> <a href="{% url 'news_detail_page' last_technology_news.pk %}" class="featured_img"> <img alt="" src="{{ last_technology_news.image.url }}"> <span class="overlay"></span> </a>
+                        <figcaption> <a href="{% url 'news_detail_page' last_technology_news.pk %}">{{ last_technology_news.title }}</a> </figcaption>
+                        <p>{{ last_technology_news.body | truncatewords:10 }}</p>
+                      </figure>
+                    </li>
+                    {% endfor %}
+                  </li>
+                </ul>
+                
+                </ul> 
+              </div>
+            </div>
+          </div>
+          
+          <div class="single_post_content">
+            <h2><span>{% blocktrans %}Sport{% endblocktrans %}</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav  wow fadeInDown">
+                <li>
+                  {% for last_sport_news in last_sport_news %}
+                  <li>
+                    
+                    <figure class="bsbig_fig"> <a href="{% url 'news_detail_page' last_sport_news.pk %}" class="featured_img"> <img alt="" src="{{ last_sport_news.image.url }}"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="{% url 'news_detail_page' last_sport_news.pk %}">{{ last_sport_news.title }}</a> </figcaption>
+                      <p>{{ last_sport_news.body | truncatewords:10 }}</p>
+                    </figure>
+                  </li>
+                  {% endfor %}
+                </li>
+              </ul>
+            
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>{% blocktrans %}Eng qiziq yangiliklar{% endblocktrans %}</span></h2>
+            <ul class="spost_nav">
+              <li>
+              {% for news in popular_news %}
+                <li>
+                    <a href="{{ news.get_absolute_url }}">
+                        <img src="{{ news.image.url }}" alt="{{ news.title }}" class="sidebar-image" width="100" height="70">
+                        <span>{{ news.title | truncatewords:3 }}</span>
+                    </a>
+                </li>
+              {% endfor %}
+              </li>
+              
+            </ul>
+          </div>
+          <div class="single_sidebar">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Categorys</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="category">
+                <ul>
+
+                    <li><a href="{% url 'local_news_page' %}">MAHALLIY</a></li>
+                    <li><a href="{% url 'foriegn_news_page' %}">XORIJ</a></li>
+                    <li><a href="{% url 'technology_news_page' %}">TEXNOLOGIYA</a></li>
+                    <li><a href="{% url 'sport_news_page' %}">SPORT</a></li>
+
+                </ul>   
+              </div>
+              <div role="tabpanel" class="tab-pane" id="video">
+                <div class="vide_area">
+                  <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="comments">
+                <ul class="spost_nav">
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="{% url 'single_page' %}" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
+                      <div class="media-body"> <a href="{% url 'single_page' %}" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="{% url 'single_page' %}" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
+                      <div class="media-body"> <a href="{% url 'single_page' %}" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="{% url 'single_page' %}" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
+                      <div class="media-body"> <a href="{% url 'single_page' %}" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="{% url 'single_page' %}" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
+                      <div class="media-body"> <a href="{% url 'single_page' %}" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Sponsor</span></h2>
+            <img src="{% static 'images/xabaruz.JPG' %}" alt="Sponsor Rasmi">
+            <a href="https://www.xabar.uz/"><i class="fas fa-external-link-alt"></i></a>
+         
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Links</span></h2>
+            
+            <ul>
+              <li><a href="{% url 'register' %}">Register</a></li>
+              <li><a href="{% url 'user_profile' %}">Profile</a></li>
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'contact' %}">Contact US </a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  
+{% endblock content %}

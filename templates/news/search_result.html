@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+
+{% block title %}Qidiruv Natijalari{% endblock title %}
+
+{% block content %}
+    <h2>Qidiruv Natijalari</h1>
+    {% for yangilik in barcha_yangiliklar %}
+        <h2><a href="{% url 'news_detail_page' yangilik.pk %}" class="text-danger">{{ yangilik.title }}</h2>
+        <p><img src="{{ yangilik.image.url }}" alt="yangilik_rasmi" width="30%"></p> 
+        <p>Yuklangan: {{ yangilik.created_time | date:"Y-m-d H:i:s" }}</p>   
+        <p>{{ yangilik.body | truncatewords:10 }}</p>
+    {% endfor %}        
+    
+{% endblock content %}      

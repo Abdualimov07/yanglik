@@ -1,0 +1,23 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+
+{% block title %}Foydalanuvchi profili{% endblock title %}
+
+{% block content %}
+
+    <h3>Xush kelibsiz {{ user.username }}</h3>
+    <h2>Siz haqingizda ma'lumotlar</h2>
+    <label>Username:</label><input class="form-control" style="width:500px;" value="{{ user.username }}"><br><br>
+    <label>Emailingiz:</label><input class="form-control" style="width:500px;" value="{{ user.email }}"><br><br>
+    <label>Ismingiz:</label><input class="form-control" style="width:500px;" value="{{ user.first_name }}"><br><br>
+    <label>Familyangiz:</label><input class="form-control" style="width:500px;" value="{{ user.last_name }}"><br><br>
+
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-danger" style="border-radius:4px; background-color: #EF5AF1; text-decoration: none;">Save</button>
+    </form><br><br>
+    <a href="{% url 'profile_edit_page' %}"> <h4>Profilni tahrirlash</h4></a><br>
+    <h4><a href="{% url 'password-change'  %}" style="color:red">Parolni o'zgartirish</a></h4><br><br>
+{% endblock content %}
