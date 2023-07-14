@@ -17,9 +17,8 @@ urlpatterns = [
 ) 
     
 handler404 = 'news_app.views.error_404_view'
-handler500 = 'news_app.views.error_500_view'
-handler400 = 'news_app.views.error_400_view'
-handler403 = 'news_app.views.error_403_view'
+
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

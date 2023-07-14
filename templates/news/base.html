@@ -61,7 +61,10 @@
           <div class="header_top_right">
             {% if request.user.is_authenticated %}
               <p><a href="{% url 'user_profile' %}" style="color: yellow"> {% blocktrans %} Mening profilim{% endblocktrans %}</a></p>
-              <p><a href="{% url 'logout' %}" style="color: yellow">{% blocktrans %}Saytdan chiqish{% endblocktrans %}</a></p>
+              {% if user.is_superuser %}
+                <p><a href="{% url 'admin_page' %}" style="color: yellow">{% blocktrans %}Adminlar ro'yhatini ko'rish{% endblocktrans %}</a></p>
+              {% endif %}
+              <p><a href="{% url 'logout' %}" style="color: yellow">{% blocktrans %}Saytdan chiqish{% endblocktrans %}</a></p>              
             {% else %}
               <p><a href="{% url 'login' %}" style="color: yellow">{% blocktrans %}Saytga kirish{% endblocktrans %}</a></p>
               <p><a href="{% url 'register' %}" style="color: yellow">{% blocktrans %}Saytdan ro'yhatdan o'tish{% endblocktrans %}</a></p>

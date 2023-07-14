@@ -41,13 +41,13 @@
                 </p>
                 <p>
                     <label for="{{ comment_form.body.id_for_label }}"></label>
-                    {{ comment_form.body }}
+                    <textarea id="{{ comment_form.body.id_for_label }}" name="{{ comment_form.body.name }}" class="form-control" style="width:350px; height:120px;"></textarea>
                 </p>
                 <button type="submit" class="btn btn-danger" style="border-radius:4px; background-color: #EF5AF1; text-decoration: none;">
                     Yuborish
                 </button>
             </form>
-        </div>
+        </div>      
     </div>
     {% else %}
     <div class="card-body">

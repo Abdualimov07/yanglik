@@ -80,12 +80,12 @@ def news_detail(request, id):
  
 
 
-@login_required
+
 def HomePageView(request):
-    news_list = News.objects.all().order_by('-publish_time')[:5]
+    news_list = News.objects.order_by('-publish_time')[:5]
     categories = Category.objects.all()
     local_news = News.objects.all().filter(category__name="Mahalliy").order_by('-publish_time')[1:6]
-    last_local_news = News.objects.all().filter(category__name="Mahalliy").order_by('-publish_time')[:1]
+    last_local_news = News.objects.all().filter(category__name="Mahalliy").order_by('-publish_time')[:2]
     header_last_news = News.objects.all().order_by('-publish_time')[:5]
     technology_news = News.objects.all().filter(category__name="Texnologiya").order_by('-publish_time')[1:6]
     foreign_news = News.objects.all().filter(category__name="Xorij").order_by('-publish_time')[1:6]
@@ -133,13 +133,9 @@ def ContactView(request):
 def error_404_view(request, exception):
     return render(request, 'news/404.html', status=404)
 
-def error_500_view(request):
-    return render(request, 'news/500.html', status=500)
 
-def error_400_view(request, exception):
-    return render(request, 'news/400.html', status=400)
-def error_403_view(request, exception):
-    return render(request, 'news/403.html', status=403)
+
+
 
 def SinglePageView(request):
     return render(request, 'news/single_page.html')
