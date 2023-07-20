@@ -8,10 +8,10 @@
 
     <h3>Xush kelibsiz {{ user.username }}</h3>
     <h2>Siz haqingizda ma'lumotlar</h2>
-    <label>Username:</label><input class="form-control" style="width:500px; position: fixed; top: 10px; left: 10px;" value="{{ user.username }}"><br><br>
-    <label>Emailingiz:</label><input class="form-control" style="width:500px; position: fixed; top: 10px; left: 10px;" value="{{ user.email }}"><br><br>
-    <label>Ismingiz:</label><input class="form-control" style="width:500px; position: fixed; top: 10px; left: 10px;" value="{{ user.first_name }}"><br><br>
-    <label>Familyangiz:</label><input class="form-control" style="width:500px; position: fixed; top: 10px; left: 10px;" value="{{ user.last_name }}"><br><br>
+    <label>Username:</label><input  style="width:500px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" value="{{ user.username }}"><br><br>
+    <label>Emailingiz:</label><input  style="width:500px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" value="{{ user.email }}"><br><br>
+    <label>Ismingiz:</label><input  style="width:500px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" value="{{ user.first_name }}"><br><br>
+    <label>Familyangiz:</label><input  style="width:500px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" value="{{ user.last_name }}"><br><br>
 
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
