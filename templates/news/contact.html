@@ -14,9 +14,9 @@
             <h2>Biz bilan aloqa</h2>
             <p>Biz bilan bog'lanmoqchi yoki bizga takliflaringiz bo'lsa <br> ushbu formani to'ldiring</p>
             <form action="#" class="contact_form" method="post">{% csrf_token %}
-              <input class="form-control" type="text" placeholder="Ismingizni kiriting", name="name" style="position: fixed; top: 10px; left: 10px;">
-              <input class="form-control" type="email" placeholder="Emailingizni kiriting", name="email" style="position: fixed; top: 10px; left: 10px;">
-              <textarea class="form-control" cols="30" rows="10" placeholder="Xabaringizni kiriting", name="message" style="position: fixed; top: 10px; left: 10px;"></textarea>
+              <input  type="text" placeholder="Ismingizni kiriting", name="name" style="width: 200px; height: 30px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" >
+              <input  type="email" placeholder="Emailingizni kiriting", name="email" style="width: 200px; height: 30px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" >
+              <textarea  cols="30" rows="10" placeholder="Xabaringizni kiriting", name="message" style="width: 200px; height: 30px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" ></textarea>
               <input type="submit" value="Yuborish">
             </form>
           </div>
