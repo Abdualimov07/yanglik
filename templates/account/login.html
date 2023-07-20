@@ -14,7 +14,7 @@
         {% for field in form %}
             <div class="form-group">
                 {{ field.label_tag }}
-                {{ field.errors }}
+                {{ field.errors }}<br>
                 <input type="{{ field.field.widget.input_type }}"  style="width:400px; font-size: 16px; border: 1px solid #ccc; padding: 5px; border-radius: 5px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); transition: border-color 0.3s, box-shadow 0.3s;" name="{{ field.html_name }}" id="{{ field.id_for_label }}" value="{{ field.value|default_if_none:'' }}">
             </div>
         {% endfor %}
