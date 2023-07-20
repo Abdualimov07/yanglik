@@ -14,9 +14,9 @@
             <h2>Biz bilan aloqa</h2>
             <p>Biz bilan bog'lanmoqchi yoki bizga takliflaringiz bo'lsa <br> ushbu formani to'ldiring</p>
             <form action="#" class="contact_form" method="post">{% csrf_token %}
-              <input class="form-control" type="text" placeholder="Ismingizni kiriting", name="name">
-              <input class="form-control" type="email" placeholder="Emailingizni kiriting", name="email">
-              <textarea class="form-control" cols="30" rows="10" placeholder="Xabaringizni kiriting", name="message"></textarea>
+              <input class="form-control" type="text" placeholder="Ismingizni kiriting", name="name" style="position: fixed; top: 10px; left: 10px;">
+              <input class="form-control" type="email" placeholder="Emailingizni kiriting", name="email" style="position: fixed; top: 10px; left: 10px;">
+              <textarea class="form-control" cols="30" rows="10" placeholder="Xabaringizni kiriting", name="message" style="position: fixed; top: 10px; left: 10px;"></textarea>
               <input type="submit" value="Yuborish">
             </form>
           </div>
