@@ -140,7 +140,11 @@
                 <li>
                     <a href="{{ news.get_absolute_url }}">
                         <img src="{{ news.image.url }}" alt="{{ news.title }}" class="sidebar-image" width="100" height="70">
-                        <span>{{ news.title | truncatewords:3 }}</span>
+                        <span>
+                          <a href="{% url 'news_detail_page' news.pk %}" class="news-title">
+                            {{ news.title|truncatewords:3 }}
+                          </a>
+                        </span>
                     </a>
                 </li>
               {% endfor %}
